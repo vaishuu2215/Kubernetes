@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: avnipod
+  labels:
+    app: myapp
+spec:
+  containers:
+  - name: avnicontainer
+    image: vaishnavimalini/avni    
+    ports:
+      - containerPort: 80
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: friendpod
+  labels:
+    app: myapp
+spec:
+  containers:
+  - name: friendcontainer
+    image: vaishnavimalini/friends   
+    ports:
+      - containerPort: 80
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: familypod
+  labels:
+    app: myapp
+spec:
+  containers:
+  - name: familycontainer
+    image: vaishnavimalini/family
+    ports:
+      - containerPort: 80
